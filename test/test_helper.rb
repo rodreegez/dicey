@@ -1,2 +1,2 @@
 require 'test/unit'
-require 'lib/dice'
+require './lib/dice'
