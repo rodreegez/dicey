@@ -6,4 +6,12 @@ class DiceTest < Test::Unit::TestCase
     assert_equal 2, d.length
     assert_instance_of Die, d.first
   end
+  def test_dice_can_be_rolled
+    d = Dice.new(5)
+    result = d.roll
+    assert_instance_of Array, result
+    assert_equal 5, result.length
+    assert !result.include?(0)
+    assert !result.include?(7)
+  end
 end
